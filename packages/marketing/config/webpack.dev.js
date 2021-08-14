@@ -1,5 +1,4 @@
 const { merge } = require('webpack-merge');
-
 const commonConfig = require('./webpack.common');
 const { ModuleFederationPlugin } = require('webpack').container;
 const deps = require('../package.json').dependencies;
@@ -24,4 +23,4 @@ const devConfig = {
   ],
 };
 
-module.exports = merge(commonConfig, devConfig); // we added devConfig second so that it can override whatever is in commonConfig if need arises
+module.exports = merge(commonConfig, devConfig);
